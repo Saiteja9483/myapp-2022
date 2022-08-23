@@ -60,7 +60,7 @@ pipeline{
                 branch "master"
             }
             steps{
-               echo "deploying to master server...."
+               echo "deploying to master server....Okay"
             }
         }
     }
