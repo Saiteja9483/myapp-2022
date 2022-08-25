@@ -2,10 +2,10 @@
 pipeline{
     agent any
     stages{
-        stage("getting sc"){
+        //stage("getting sc"){
             steps{
                 // git credentialsId: 'slave', url: 'https://github.com/Saiteja9483/myapp-2022.git'
-               //git credentialsId: 'admin', url: 'https://github.com/Saiteja9483/myapp-2022.git'
+               //git credentialsId: 'admin', url: 'https://github.com/Saiteja9483/myapp-2022.git'//
             }
         }
         stage("mvn package"){
