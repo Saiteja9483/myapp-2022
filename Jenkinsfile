@@ -1,6 +1,19 @@
 pipeline{
+    parameters {
+  choice choices: ['master', 'develop', 'qa'], description: 'branches parameterizing ', name: 'BranchName'
+}
     agent any
     stages{
+         stage("working on specific branch"){
+            when{
+                expression{
+                    params.BranchName=="master"
+                }
+            }
+            steps{
+                echo "working on master branch"
+            }
+        }
         stage("Maven Build"){
             when {
                 branch "develop"
