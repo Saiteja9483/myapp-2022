@@ -4,16 +4,6 @@ pipeline{
 }
     agent any
     stages{
-         stage("working on specific branch"){
-            when{
-                expression{
-                    params.BranchName=="develop" 
-                }
-            }
-            steps{
-                echo "working on master branch"
-            }
-        }
         stage("Maven Build"){
             when {
                 branch "develop"
