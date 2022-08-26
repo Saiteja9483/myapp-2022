@@ -7,7 +7,7 @@ pipeline{
          stage("working on specific branch"){
             when{
                 expression{
-                    params.BranchName=="master" "develop"
+                    params.BranchName=="master" 
                 }
             }
             steps{
